@@ -1,9 +1,3 @@
-[%%shared
-open Eliom_lib
-open Eliom_content
-open Html.D
-]
-
 module %%%MODULE_NAME%%%_app =
   Eliom_registration.App (
   struct
@@ -21,10 +15,10 @@ let () =
   %%%MODULE_NAME%%%_app.register
     ~service:main_service
     (fun () () ->
-       Lwt.return
-         (Eliom_tools.F.html
-            ~title:"%%%PROJECT_NAME%%%"
-            ~css:[["css";"%%%PROJECT_NAME%%%.css"]]
-            Html.F.(body [
-              h1 [txt "Welcome from Eliom's distillery!"];
-            ])))
+      Lwt.return
+        (Eliom_tools.F.html
+          ~title:"%%%PROJECT_NAME%%%"
+          ~css:[["css"; "%%%PROJECT_NAME%%%.css"]]
+          Html.F.(body [
+            h1 [txt "Welcome from Eliom's distillery!"];
+          ])))
