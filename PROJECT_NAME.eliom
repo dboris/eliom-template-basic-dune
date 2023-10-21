@@ -19,6 +19,6 @@ let () =
         (Eliom_tools.F.html
           ~title:"%%%PROJECT_NAME%%%"
           ~css:[["css"; "%%%PROJECT_NAME%%%.css"]]
-          Html.F.(body [
+          Eliom_content.Html.F.(body [
             h1 [txt "Welcome from Eliom's distillery!"];
           ])))
