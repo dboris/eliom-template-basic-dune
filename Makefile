@@ -25,8 +25,7 @@ endif
 .PHONY: all byte opt
 
 DIST_DIRS          := $(ETCDIR) $(DATADIR) $(LIBDIR) $(LOGDIR) \
-                      $(FILESDIR)/avatars/tmp $(ELIOMSTATICDIR) \
-                      $(shell dirname $(CMDPIPE))
+                      $(ELIOMSTATICDIR) $(shell dirname $(CMDPIPE))
 JS_PREFIX          := $(TEST_PREFIX)$(ELIOMSTATICDIR)/$(PROJECT_NAME)
 
 CONF_IN            := $(wildcard *.conf.in)
