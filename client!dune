@@ -7,6 +7,6 @@
     (build_runtime_flags :standard --enable use-js-string)
     (flags :standard --enable with-js-error --enable use-js-string
             --no-source-map)) ; source maps are slow...
-  (libraries eliom.client ocsigen-start.client))
+  (libraries eliom.client))
 
 (include dune.client)

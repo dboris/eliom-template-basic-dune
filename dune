@@ -1,9 +1,9 @@
-(dirs tools client assets)
+(dirs tools client)
 
 (executables
   (names %%%PROJECT_NAME%%%)
   (modes (byte plugin) (native plugin))
-  (libraries eliom.server ocsigen-start.server ocsipersist.%%%PROJECT_DB%%%)
+  (libraries eliom.server ocsipersist.%%%PROJECT_DB%%%)
   (preprocess
     (pps
       lwt_ppx
